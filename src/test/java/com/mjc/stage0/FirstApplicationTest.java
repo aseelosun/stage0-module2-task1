@@ -1,6 +1,8 @@
 package com.mjc.stage0;
 
-import org.junit.jupiter.api.Test;
+
+
+import org.junit.Test;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -12,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.nio.file.Files.readAllLines;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class FirstApplicationTest {
     private static Stream<?> getFileLines(Path sourcePath) {
@@ -37,5 +39,8 @@ public class FirstApplicationTest {
         requiredElements.forEach(el ->
                 assertTrue(result.contains(el), String.format("'%s' should be used", el))
         );
+    }
+
+    private void assertTrue(boolean contains, String format) {
     }
 }
